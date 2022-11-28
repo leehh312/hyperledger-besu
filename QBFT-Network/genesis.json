@@ -1,0 +1,44 @@
+{
+  "config" : {
+    "chainId" : 20221126,
+    "muirglacierblock": 0,
+    "qbft" : {
+      "blockperiodseconds" : 4,
+      "epochlength" : 30000,
+      "requesttimeoutseconds" : 6
+    },
+    "contractSizeLimit" : 2147483647
+  },
+  "evmStackSize" : 5000000,
+  "messageQueueLimit" : 5000000,
+  "duplicateMessageLimit" :1000,
+  "futureMessagesLimit" : 5000000,
+  "nonce" : "0x0",
+  "timestamp" : "0x58ee40ba",
+  "gasLimit" : "0x1fffffffffffff",
+  "difficulty" : "0x1",
+  "mixHash" : "0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
+  "coinbase" : "0x0000000000000000000000000000000000000000",
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "alloc" : {
+    "11549197c99e4b886ed7d6ed2843f534a4f367fc" : {
+      "privateKey" : "691193c87afa8c0fe94c5ef32a5b223879f4db1c956f6f070e31a4ae3519d996",
+      "balance" : "0xad78ebc5ac6200000"
+    },
+    "66283b796406855fcb763d60742e922c0143deef" : {
+      "privateKey" : "cd43e18391ab9eb9851538b8e5b1f5602ab81059cebcf282ad7cced859c94513",
+      "balance" : "0xad78ebc5ac6200000"
+    },
+    "b7bb70ad693cc227d45507d5579a7077caa5f426" : {
+      "privateKey" : "ca0196e07feeb2d7912bb96e6a73c79ee00928e53dc9e5b8cd886c6897ea3068",
+      "balance" : "0xad78ebc5ac6200000"
+    },
+    "edad1970f705d11f59130b29d76c37332772e24c" : {
+      "privateKey" : "2da52730a784fe5e1a0b4c127409e24b6e14f2c6ba9ef2ccb063907d8855db83",
+      "balance" : "0xad78ebc5ac6200000"
+    }
+  },
+  "extraData" : "0xf87aa00000000000000000000000000000000000000000000000000000000000000000f8549411549197c99e4b886ed7d6ed2843f534a4f367fc9466283b796406855fcb763d60742e922c0143deef94b7bb70ad693cc227d45507d5579a7077caa5f42694edad1970f705d11f59130b29d76c37332772e24cc080c0"
+}

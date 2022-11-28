@@ -1,0 +1,74 @@
+version: "3"
+services:
+  node1:  
+    container_name: ${NODE1_HOYA_PEER_NAME}
+    image: ${HOYA_NODE_IMAGE}
+    environment:
+      HOYA_PEER_NAME: ${NODE1_HOYA_PEER_NAME}
+      HOYA_LOGGING: ${HOYA_LOGGING}
+      HOYA_BESU_COLOR_ENABLED: ${HOYA_BESU_COLOR_ENABLED}
+      HOYA_NODE: ${NODE1_HOYA_NODE}
+      HOYA_HTTP_PORT: ${NODE1_HOYA_HTTP_PORT}
+      HOYA_P2P_PORT: ${NODE1_HOYA_P2P_PORT}
+    entrypoint: ${HOYA_COMMAND}
+    ports: 
+      - "${NODE1_HOYA_HTTP_PORT}:${NODE1_HOYA_HTTP_PORT}"
+    networks: 
+      - hoya_net
+    volumes: ['./QBFT-Network/${NODE1_HOYA_NODE}/data:/QBFT-Network/${NODE1_HOYA_NODE}/data']
+    restart: always
+  node2:  
+    container_name: ${NODE2_HOYA_PEER_NAME}
+    image: ${HOYA_NODE_IMAGE}
+    environment:
+      HOYA_PEER_NAME: ${NODE2_HOYA_PEER_NAME}
+      HOYA_LOGGING: ${HOYA_LOGGING}
+      HOYA_BESU_COLOR_ENABLED: ${HOYA_BESU_COLOR_ENABLED}
+      HOYA_NODE: ${NODE2_HOYA_NODE}
+      HOYA_HTTP_PORT: ${NODE2_HOYA_HTTP_PORT}
+      HOYA_P2P_PORT: ${NODE2_HOYA_P2P_PORT}
+    entrypoint: ${HOYA_COMMAND}
+    ports: 
+      - "${NODE2_HOYA_HTTP_PORT}:${NODE2_HOYA_HTTP_PORT}"
+    networks: 
+      - hoya_net
+    volumes: ['./QBFT-Network/${NODE1_HOYA_NODE}/data:/QBFT-Network/${NODE1_HOYA_NODE}/data']
+    restart: always
+  node3:  
+    container_name: ${NODE3_HOYA_PEER_NAME}
+    image: ${HOYA_NODE_IMAGE}
+    environment:
+      HOYA_PEER_NAME: ${NODE3_HOYA_PEER_NAME}
+      HOYA_LOGGING: ${HOYA_LOGGING}
+      HOYA_BESU_COLOR_ENABLED: ${HOYA_BESU_COLOR_ENABLED}
+      HOYA_NODE: ${NODE3_HOYA_NODE}
+      HOYA_HTTP_PORT: ${NODE3_HOYA_HTTP_PORT}
+      HOYA_P2P_PORT: ${NODE3_HOYA_P2P_PORT}
+    entrypoint: ${HOYA_COMMAND}
+    ports: 
+      - "${NODE3_HOYA_HTTP_PORT}:${NODE3_HOYA_HTTP_PORT}"
+    networks: 
+      - hoya_net
+    volumes: ['./QBFT-Network/${NODE1_HOYA_NODE}/data:/QBFT-Network/${NODE1_HOYA_NODE}/data']
+    restart: always
+  node4:  
+    container_name: ${NODE4_HOYA_PEER_NAME}
+    image: ${HOYA_NODE_IMAGE}
+    environment:
+      HOYA_PEER_NAME: ${NODE4_HOYA_PEER_NAME}
+      HOYA_LOGGING: ${HOYA_LOGGING}
+      HOYA_BESU_COLOR_ENABLED: ${HOYA_BESU_COLOR_ENABLED}
+      HOYA_NODE: ${NODE4_HOYA_NODE}
+      HOYA_HTTP_PORT: ${NODE4_HOYA_HTTP_PORT}
+      HOYA_P2P_PORT: ${NODE4_HOYA_P2P_PORT}
+    entrypoint: ${HOYA_COMMAND}
+    ports: 
+      - "${NODE4_HOYA_HTTP_PORT}:${NODE4_HOYA_HTTP_PORT}"
+    networks: 
+      - hoya_net
+    volumes: ['./QBFT-Network/${NODE1_HOYA_NODE}/data:/QBFT-Network/${NODE1_HOYA_NODE}/data']
+    restart: always
+
+networks: 
+  hoya_net: 
+    driver: bridge
